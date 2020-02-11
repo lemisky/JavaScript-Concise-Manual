@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM对象</title>
+    <script src="../js/utils.js"></script>
+</head>
+<body>
+<!--<input id="btnopen" type="button" value="打开">-->
+<!--<input id="btnclose" type="button" value="关闭">-->
+<script>
+    //BOM——浏览器对象模型
+    //1.Window      窗口对象
+    //弹窗相关
+    //alert();
+    //confirm();
+    //prompt();
+    // let b = confirm("确定要退出吗");
+    // if(b){
+    //     close();
+    // }
+    // let s = prompt("请输入身份证号：");
+    // alert(s);
+    //打开和关闭
+    //open();
+    //close();
+
+    // let open1;
+    // document.getElementById("btnopen").onclick = function () {
+    //     open1 = open("https://baidu.com");
+    // };
+    // document.getElementById("btnclose").onclick = function () {
+    //     open1.close();
+    // };
+
+    //一次性定时器
+    // setTimeout("alert('时间到了')",2000);
+    // function t1(){
+    //     document.write("Hello JS<br/>");
+    // }
+    // let timeout = setTimeout("t1()",2000);
+    // //取消一次性定时器
+    // clearTimeout(timeout);
+    // setTimeout(t1,1000);
+    // //循环计时器
+    // let interval = setInterval(t1,500);
+    // //取消循环定时器
+    // clearInterval(interval);
+
+    //2.Navigation  浏览器对象
+
+    //3.Screen      屏幕对象
+    //4.History     历史记录对象
+    //5.Location    地址栏对象
+    //Window对象
+
+    //Navigation对象
+    //遍历属性
+    show(navigator.appCodeName);    //Mozilla
+    show(navigator.appName);    //Netscape
+    show(navigator.appVersion); //5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36
+    show(navigator.clipboard);  //[object Clipboard]
+
+    //Screen
+    show(screen.availWidth);    //1536
+    show(screen.availHeight);   //824
+
+    //
+</script>
+</body>
+</html>

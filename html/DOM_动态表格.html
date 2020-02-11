@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM_动态表格</title>
+    <style>
+        table {
+            border: 1px solid;
+            width: 500px;
+            margin: auto;
+        }
+
+        th, td {
+            text-align: center;
+            border: 1px solid;
+        }
+
+        div {
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+    <script>
+        let tab;
+
+        function del(param) {
+            let tr=param.parentNode.parentNode;
+            tr.parentNode.removeChild(tr);
+        }
+
+        onload = function () {
+            //页面加载完毕
+            tab=document.getElementById("tab");
+            document.getElementById("btn_add").onclick=function () {
+                let id=document.getElementsByName("id")[0].value;
+                let name=document.getElementsByName("name")[0].value;
+                let gender=document.getElementsByName("gender")[0].value;
+                tab.lastChild.innerHTML+="<tr>\n" +
+                    "        <td>" +
+                    id +
+                    "</td>\n" +
+                    "        <td>" +
+                    name +
+                    "</td>\n" +
+                    "        <td>" +
+                    gender +
+                    "</td>\n" +
+                    "        <td><a href=\"javascript:void(0)\" onclick=\"del(this)\">删除</a></td>\n" +
+                    "    </tr>";
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+<div>
+    <input type="text" name="id" placeholder="编号">
+    <input type="text" name="name" placeholder="姓名">
+    <input type="text" name="gender" placeholder="性别">
+    <input type="button" value="添加" id="btn_add">
+</div>
+
+<table id="tab">
+    <caption>动态表格</caption>
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>王小米</td>
+        <td>男</td>
+        <td><a href="javascript:void(0)" onclick="del(this)">删除</a></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>History对象</title>
+    <script src="../js/utils.js"></script>
+</head>
+<body>
+<input type="button" value="前进" id="forward">
+<input type="button" value="后退" id="back">
+<input type="button" value="跳转第二个页面" id="go">
+<script>
+    //History对象
+    //与history对象关联的有三个重要方法
+    //back()    返回
+    //forward() 前进
+    //go()      跳转指定页面
+    //属性 length 页面个数
+    show(history.length);
+    document.getElementById("back").onclick=function () {
+        history.back();
+    };
+    document.getElementById("forward").onclick=function () {
+        history.forward();
+    };
+
+    document.getElementById("go").onclick=function () {
+        history.go(2);
+    };
+
+
+</script>
+</body>
+</html>

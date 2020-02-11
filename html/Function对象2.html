@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function对象2</title>
+    <script>
+        //返回值
+        function f1(){
+        }
+        alert(f1());     // 弹出 undefined
+
+        function f2(){
+            return "返回值";
+        }
+        alert(f2());     // 弹出 返回值
+        //内置对象
+        //1.arguments
+        function f(){
+            for (let i = 0; i < arguments.length; i++) {
+                document.write(arguments[i]+"<br/>");
+            }
+        }
+        alert(f(1,2,3,4,5,6,7,8));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function对象</title>
+
+    <script>
+        //1.字符串形式
+        //格式：let fun=new Function("形式参数1",...,"函数体;");
+        let fun = new Function("a", "b", "document.write(a+b);");
+        fun(3, 8);
+
+        document.write("<br/>");
+
+        //2.常用方式
+        //格式：function fun1(形式参数1,...){
+        //      函数体;
+        // }
+        function fun1(a, b) {
+            document.write(a + b);
+        }
+        fun1(3, 2);
+
+        document.write("<br/>");
+
+        //3.其他方式
+        //格式：let fun2=function(a,b){
+        //      函数体;
+        //    }
+        let fun2 = function (a, b) {
+            return a + b;
+        };
+        document.write(fun2(3,6));
+
+        //特点
+        //1.JavaScript中不存在方法重载
+        // ·函数只和名字有关
+        // ·和参数无关
+        // ·调用的永远是最后一个同名函数
+        function f1(a) {
+            alert(a);
+        }
+        f1(null);  //调用的是下面这个，弹出NaN
+        function f1(a,b) {
+            alert(a+b);
+        }
+        // ·实参个数形参，多余的忽略
+        // ·少于，则 undefined
+        // ·其中 undefined 与 除 string类型 外 进行运算 结果总是为 NaN
+        //                与 string 进行操作 则值 表现为 "undefined"
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM入门示例</title>
+</head>
+<body>
+    <img id="light" src="../img/off.gif">
+    <script>
+        let light=document.getElementById("light");
+        light.onclick=function () {
+            if(light.src.endsWith("off.gif")){
+                light.src="../img/on.gif";
+            }else {
+                light.src="../img/off.gif";
+            }
+        }
+
+    </script>
+</body>
+</html>

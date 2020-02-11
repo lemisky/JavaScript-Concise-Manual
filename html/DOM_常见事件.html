@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM_常见事件</title>
+    <!--
+        1.点击事件
+            onclick     单击/点击 事件
+            ondbclick   双击事件
+        2.焦点事件
+            onblur      失去焦点时触发
+            onfocus     获取焦点
+        3.鼠标事件
+            onmousedown     鼠标按下
+            onmouseup       鼠标松开
+            onmousemove     鼠标移动
+            onmouseover     鼠标移开
+            onmouseout      鼠标移入
+        4.键盘事件
+            onkeydown       某键按下
+            onkeyup         某键松开
+            onkeypress      某键按下并松开(即按了某键)
+        5.加载事件
+            onload          加载事件
+        6.选择和改变事件
+            onchange        内容改变
+            onselect        被选中
+        7.表单事件
+            onsubmit        提交事件
+            onreset         表单重置
+    -->
+
+</head>
+<body>
+
+<!--
+事件绑定的两种方法:1.内部,2.外部
+-->
+<input type="button" value="内部事件绑定" onclick="f()">
+<input id="input1" type="button" value="外部事件绑定">
+
+<script>
+    function f() {
+        alert("点击事件");
+    }
+    document.getElementById("input1").onclick = f;
+</script>
+
+</body>
+</html>

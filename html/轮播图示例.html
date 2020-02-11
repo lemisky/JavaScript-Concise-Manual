@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图示例</title>
+</head>
+<body>
+<img id="pic" src="../img/off.gif">
+<script>
+    let pic = document.getElementById("pic");
+    function cPic() {
+        if (pic.src.endsWith("off.gif")) {
+            pic.src = "../img/on.gif";
+        } else {
+            pic.src = "../img/off.gif";
+        }
+    }
+    setInterval(cPic, 300);
+</script>
+</body>
+</html>

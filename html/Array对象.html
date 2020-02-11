@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array对象</title>
+    <script>
+        //创建
+        //1.let arr1=new Array();
+        //2.let arr2=new Array(数组长度);
+        //3.let arr3=new Array(元素1,元素2,...);    //当只写一个 number 元素时，其表示的是 数组长度
+        //4.let arr4=[元素1,元素2,...];
+
+        let arr1=new Array();
+
+        //特点
+        //1.可同时存放任意数据类型 元素
+        //2.长短可变，自动调节
+        arr1.push(1,true,"123");
+        //arr1[n]=1; //对下标为 n 的元素进行赋值后，其数组长度自动增加 至 n+1，其他未赋值为 undefined
+
+        //属性
+        // length
+        alert(arr1.length); //3
+
+        //方法
+        // join(指定分隔符); 指定分隔符连接,默认为 逗号 ,
+        alert(arr1.join("@"));  //1@true@123
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

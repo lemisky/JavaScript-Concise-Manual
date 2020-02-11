@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件小示例</title>
+    <style>
+        table {
+            text-align: center;
+            width: 600px;
+            margin: auto;
+            border: 1px solid;
+        }
+
+        th, td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <caption>学生信息表</caption>
+    <tr>
+        <th><input id="sl_" type="checkbox" name="checkbox"></th>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="checkbox"></td>
+        <td>1</td>
+        <td>科尔森</td>
+        <td>男</td>
+        <td><a href="javascript:void(0)" onclick="del(this)">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="checkbox"></td>
+        <td>2</td>
+        <td>梅</td>
+        <td>女</td>
+        <td><a href="javascript:void(0)" onclick="del(this)">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="checkbox"></td>
+        <td>3</td>
+        <td>斯凯</td>
+        <td>女</td>
+        <td><a href="javascript:void(0)" onclick="del(this)">删除</a></td>
+    </tr>
+    <tr>
+        <td colspan="5" style="text-align: right">
+            <input id="sl_all" type="button" value="全选">
+            <input id="sl_zero" type="button" value="全不选">
+            <input id="sl_other" type="button" value="反选">
+        </td>
+    </tr>
+</table>
+
+<script>
+    //删除链接事件
+    function del(obj) {
+        let tr = obj.parentNode.parentNode;
+        tr.parentNode.removeChild(tr);
+    }
+
+    function f(b) {
+        let checkbox = document.getElementsByName("checkbox");
+        for (let i = 0; i < checkbox.length; i++) {
+            checkbox[i].checked = b;
+        }
+    }
+
+    document.getElementById("sl_all").onclick = function () {
+        f(true);
+    };
+
+
+    document.getElementById("sl_zero").onclick = function () {
+        f(false);
+    };
+
+    document.getElementById("sl_other").onclick = function () {
+        let checkbox = document.getElementsByName("checkbox");
+        for (let i = 0; i < checkbox.length; i++) {
+            checkbox[i].checked = !checkbox[i].checked;
+        }
+    };
+
+    let sl_ = document.getElementById("sl_");
+    sl_.onclick = function () {
+        f(sl_.checked);
+    };
+
+    let tr = document.getElementsByTagName("tr");
+    for (let i=0;i<tr.length;i++){
+        tr[i].onmouseover=function(){
+            tr[i].style.backgroundColor="darksalmon";
+        };
+        tr[i].onmouseout=function () {
+            tr[i].style.backgroundColor="white";
+        }
+    }
+</script>
+</body>
+</html>

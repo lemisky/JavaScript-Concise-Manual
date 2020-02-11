@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RegExp对象</title>
+    <script src="../js/utils.js"></script>
+    <script>
+        //定义
+        let reg1=new RegExp("\\w{6,12}");
+        show(reg1.test("abcdefgh"));
+        let reg2=/\w{6,12}/;
+        show(reg2.test("abcdefgh"));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

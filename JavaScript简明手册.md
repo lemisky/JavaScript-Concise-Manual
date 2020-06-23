@@ -22,7 +22,7 @@ JavaScript是一门客户端脚本语言，用于在用户浏览器中执行一�
             document.write("JavaScript代码");
         </script>
 
-2.引用外部**js**文件
+2.引用外部 **js** 文件
 
     <!--    外部js文件，可多次引用，重复执行-->
         <script src="../js/out_ref.js"></script>
@@ -34,7 +34,7 @@ JavaScript是一门客户端脚本语言，用于在用户浏览器中执行一�
     /*
     多行注释
     */
-    
+
 ### 2.数据类型
     //基本数据类型
     number  数值类型，相当与java的 int+double
@@ -46,7 +46,7 @@ JavaScript是一门客户端脚本语言，用于在用户浏览器中执行一�
     
     //引用数据类型
     Object  对象
-    
+
 ### 3.关于变量
     JavaScript是一种弱类型语言，变量的类型完全由赋予的值所确定
     //变量的定义
@@ -77,9 +77,10 @@ JavaScript是一门客户端脚本语言，用于在用户浏览器中执行一�
     
     const 作用域 与 let 作用域相同，区别在于 使用 const 定义 的 变量，
     不能 被 二次赋值，也就是 一旦 被赋值后 就 不能 再去 修改/改变
-    
-    
-### 4.typeof关键字——获取变量数据类型
+
+
+​    
+### 4. typeof 关键字——获取变量数据类型
     document.write(typeof 1+"<br/>");   //打印出   number
     document.write(typeof true+"<br/>");    //打印出   boolean
     document.write(typeof "string"+"<br/>");    //打印出   string
@@ -144,7 +145,7 @@ JavaScript是一门客户端脚本语言，用于在用户浏览器中执行一�
     while   
     do while
 ## ECMA标准对象
-### 1.Function（函数）对象
+### 1. Function（函数）对象
 #### 创建方式
     //1.字符串形式
         //格式：let fun=new Function("形式参数1",...,"函数体");
@@ -201,7 +202,7 @@ JavaScript是一门客户端脚本语言，用于在用户浏览器中执行一�
         }
     }
     alert(f(1,2,3,4,5,6,7,8));
-### 2.Array对象
+### 2. Array对象
 #### 创建
     //1.let arr1=new Array();
     //2.let arr2=new Array(数组长度);
@@ -288,7 +289,7 @@ JavaScript是一门客户端脚本语言，用于在用户浏览器中执行一�
         </script>
     </body>
 ## BOM对象——浏览器对象模型
-### 1.window
+### 1. window
     //弹窗相关
         //1.alert(); 警告对话框
         //2.confirm();  确定对话框
@@ -335,18 +336,18 @@ JavaScript是一门客户端脚本语言，用于在用户浏览器中执行一�
         //location      地址栏对象
     //获取    DOM 对象
         //document      文档对象
-### 2.navigator 浏览器对象
+### 2. navigator 浏览器对象
     //遍历属性
     show(navigator.appCodeName);    //Mozilla
     show(navigator.appName);    //Netscape
     show(navigator.appVersion); //5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36
     show(navigator.clipboard);  //[object Clipboard]
-    
-### 3.screen    屏幕对象
+
+### 3. screen    屏幕对象
     show(screen.availWidth);    //1536
     show(screen.availHeight);   //824
 
-### 4.history   历史记录对象
+### 4. history   历史记录对象
     //与history对象关联的有三个重要方法
         //back()    返回
         //forward() 前进
@@ -363,7 +364,7 @@ JavaScript是一门客户端脚本语言，用于在用户浏览器中执行一�
         document.getElementById("go").onclick=function () {
             history.go(2);
         };
-### 5.location 地址栏对象
+### 5. location 地址栏对象
     document.getElementById("reload").onclick=function () {
         location.reload();
     };
@@ -433,9 +434,10 @@ JavaScript是一门客户端脚本语言，用于在用户浏览器中执行一�
     </script>
 ### 事件小示例
             学生信息表
-	编号	姓名	性别	操作
-	1	科尔森	男	删除
-	2	梅	女	删除
-	3	斯凯	女	删除
-  
-    
+    编号	姓名	性别	操作
+    1	科尔森	男	删除
+    2	梅	女	删除
+    3	斯凯	女	删除
+
+
+​    
